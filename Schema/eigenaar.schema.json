@@ -1,0 +1,19 @@
+{
+    "title": "eigenaar",
+    "$id": "https://opencatalogi.nl/eigenaar.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "persoon": {
+            "$ref": "#/definitions/persoon"
+        },
+        "bestuurders": {
+            "$ref": "#/definitions/bestuurders"
+        },
+        "rechtsvorm": {},
+        "gemachtigde": {
+            "$ref": "#/definitions/gemachtigde"
+        }
+    }
+}

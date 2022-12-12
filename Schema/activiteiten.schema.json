@@ -1,0 +1,17 @@
+{
+    "title": "activiteiten",
+    "$id": "https://opencatalogi.nl/activiteiten.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "omschrijving": {
+            "type": "string"
+        },
+        "sbiActiviteiten": {
+            "$ref": "#/definitions/sbiActiviteiten"
+        },
+        "indicatieExporteert": {},
+        "indicatieImporteert": {}
+    }
+}
