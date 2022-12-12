@@ -1,0 +1,44 @@
+{
+    "title": "Vestigingen",
+    "$id": "https://opencatalogi.nl/vestigingen.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "description": "Zoek vestigingen",
+    "type": "object",
+    "properties": {
+        "kvknummer": {
+            "type": "integer",
+            "maxLength": "8"
+        },
+        "postcode": {
+            "type": "string",
+            "format": "^[1-9][0-9][0-9][0-9][A-Z][A-Z]$"
+        },
+        "huisnummer": {
+            "type": "integer",
+            "minLength": "1",
+            "maxLength": "99999"
+        },
+        "huisletter": {
+            "type": "string",
+            "format": "^([a-z,A-Z,0-9]){1,4}$"
+        },
+        "straatnaam": {
+            "type": "string"
+        },
+        "woonplaatsnaam": {
+            "type": "string",
+            "format": "^([a-z,A-Z,0-9]){1,4}$"
+        },
+        "locatie": {
+            "type": "array",
+            "description": "Coordinaten van een locatie die als query-parmeter gebruikt wordt om een object te zoeken.",
+            "items": {
+                "type": "number",
+                "example": "196733.51, 439931.89",
+                "minLength": "2",
+                "maxLength": "2"
+            }
+        }
+    }
+}

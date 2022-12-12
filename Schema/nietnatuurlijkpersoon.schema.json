@@ -1,0 +1,16 @@
+{
+    "title": "nietNatuurlijkPersoon",
+    "$id": "https://opencatalogi.nl/nietnatuurlijkpersoon.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "description": "Raadpleeg een nietNatuurlijkPersoon",
+    "type": "object",
+    "properties": {
+        "rsin": {
+            "type": "string",
+            "description": "Dit is de unieke identificatie van een bij het handelsregister geregistreerde niet natuurlijk persoon.",
+            "maxLength": "9",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "title": "handelsregisterpersoon",
+    "$id": "https://opencatalogi.nl/handelsregisterpersoon.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "description": "Raadpleeg een handelsregisterpersoon (een natuurlijk persoon die niet is ingeschreven in de Basisregistratie Personen) op basis van de identificatie.",
+    "type": "object",
+    "properties": {
+        "identificatie": {
+            "type": "string",
+            "description": "Dit is de unieke identificatie van een bij het handelsregister geregistreerde persoon die niet is ingeschreven in de basisregistratie personen.",
+            "maxLength": "9",
+            "required": true
+        }
+    }
+}
