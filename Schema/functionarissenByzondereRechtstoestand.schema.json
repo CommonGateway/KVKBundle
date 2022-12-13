@@ -1,0 +1,45 @@
+{
+    "title": "fuctionarissenByzondereRechtstoestand",
+    "$id": "https://opencatalogi.nl/fuctionarissenByzondereRechtstoestand.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "identificatie": {
+            "type": "string"
+        },
+        "omschrijving": {
+            "type": "string"
+        },
+        "volledigeNaam": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string"
+        },
+        "bezoekadres": {
+            "$ref": "#definitions/bezoekadres"
+        },
+        "postadres": {
+            "$ref": "#/definitions/postadres"
+        },
+        "datumAanvang": {
+            "$ref": "#/definitions/datumAanvang"
+        },
+        "datumEinde": {
+            "$reef": "#/definitions/datumEinde"
+        },
+        "functietitel": {
+            "type": "string"
+        },
+        "indicatieStatuair": {
+            "type": "boolean"
+        },
+        "functie": {
+            "type": "string"
+        },
+        "bevoegdheid": {
+            "type": "string"
+        }
+    }
+}

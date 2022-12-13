@@ -1,0 +1,21 @@
+{
+    "title": "datumAanvang",
+    "$id": "https://opencatalogi.nl/datumAanvang.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "dag": {
+            "type": "integer"
+        },
+        "datum": {
+            "type": "string"
+        },
+        "jaar": {
+            "type": "integer"
+        },
+        "maand": {
+            "type": "integer"
+        }
+    }
+}

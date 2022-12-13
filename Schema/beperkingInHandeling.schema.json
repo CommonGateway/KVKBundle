@@ -1,0 +1,15 @@
+{
+    "title": "beperkingInHandeling",
+    "$id": "https://opencatalogi.nl/beperkingInHandeling.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "beperkingInGeld": {
+            "type": "null"
+        },
+        "soortHandeling": {
+            "type": "null"
+        }
+    }
+}

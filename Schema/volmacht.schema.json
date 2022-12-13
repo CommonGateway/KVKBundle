@@ -1,0 +1,33 @@
+{
+    "title": "volmacht",
+    "$id": "https://opencatalogi.nl/volmacht.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "indicatieStatuair": {
+            "type": "boolean"
+        },
+        "typeVolmacht": {
+            "type": "string"
+        },
+        "beperkingInGeld": {
+            "$ref": "#/definitions/beperkingInGeld"
+        },
+        "indicatieBevoegdOpgaveHandelsregister": {
+            "type": "boolean"
+        },
+        "indicatieHeeftOverigeVolmacht": {
+            "type": "boolean"
+        },
+        "omschrijvingOverigeVolmacht": {
+            "type": "string"
+        },
+        "beperkingInHandeling": {
+            "$ref": "#/definitions/beperkingInHandeling"
+        },
+        "vestigingNummers": {
+            "type": "string"
+        }
+    }
+}

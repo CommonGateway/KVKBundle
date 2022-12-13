@@ -1,0 +1,15 @@
+{
+    "title": "gestortKapitaal",
+    "$id": "https://opencatalogi.nl/gestortKapitaal.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "bedrag": {
+            "$ref": "#/definitions/bedrag"
+        },
+        "aandelen": {
+            "$ref": "#/definitions/aandelen"
+        }
+    }
+}

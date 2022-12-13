@@ -1,0 +1,43 @@
+{
+    "title": "gemachtigde",
+    "$id": "https://opencatalogi.nl/gemachtigde.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "identificatie": {
+            "type": "string"
+        },
+        "omschrijving": {
+            "type": "string"
+        },
+        "volledigeNaam": {
+            "type": "string"
+        },
+        "type": {},
+        "bezoekadres": {
+            "$ref": "#/definitions/bezoekadres"
+        },
+        "postadres": {
+            "$ref": "#/definitions/postadres"
+        },
+        "datumAanvang": {
+            "$ref": "#/definitions/datumAanvang"
+        },
+        "datumEinde": {
+            "$ref": "#/definitions/datumEinde"
+        },
+        "functietitel": {
+            "type": "string"
+        },
+        "indicatieStatuair": {
+            "type": "boolean"
+        },
+        "functie": {
+            "type": "string"
+        },
+        "volmacht": {
+            "$ref": "#/definitions/volmacht"
+        }
+    }
+}

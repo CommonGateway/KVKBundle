@@ -1,0 +1,15 @@
+{
+    "title": "waarde",
+    "$id": "https://opencatalogi.nl/waarde.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "som": {
+            "type": "null"
+        },
+        "valuta": {
+            "type": "null"
+        }
+    }
+}

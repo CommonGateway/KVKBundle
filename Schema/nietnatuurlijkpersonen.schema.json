@@ -1,0 +1,31 @@
+{
+    "title": "nietNatuurlijkPersonen",
+    "$id": "https://opencatalogi.nl/nietnatuurlijkpersonen.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "description": "Zoeken van een Niet Natuurlijk Personen.",
+    "type": "object",
+    "properties": {
+        "naam": {
+            "type": "string"
+        },
+        "woonplaats": {
+            "type": "string"
+        },
+        "straatnaam": {
+            "type": "string"
+        },
+        "huisnummer": {
+            "type": "integer",
+            "minLength": "1"
+        },
+        "postcode": {
+            "type": "string",
+            "example": "1234AZ",
+            "format": "^[1-9]{1}[0-9]{3}[A-Za-z]{2}$"
+        },
+        "statutaireZetel": {
+            "type": "string"
+        }
+    }
+}
