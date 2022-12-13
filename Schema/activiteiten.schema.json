@@ -11,7 +11,11 @@
         "sbiActiviteiten": {
             "$ref": "#/definitions/sbiActiviteiten"
         },
-        "indicatieExporteert": {},
-        "indicatieImporteert": {}
+        "indicatieExporteert": {
+            "type": "boolean"
+        },
+        "indicatieImporteert": {
+            "type": "boolean"
+        }
     }
 }

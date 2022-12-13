@@ -11,9 +11,23 @@
         "bestuurders": {
             "$ref": "#/definitions/bestuurders"
         },
-        "rechtsvorm": {},
+        "rechtsvorm": {
+            "type": "string"
+        },
         "gemachtigde": {
             "$ref": "#/definitions/gemachtigde"
+        },
+        "fuctionarissenByzondereRechtstoestand": {
+            "$ref": "#/definitions/fuctionarissenByzondereRechtstoestand"
+        },
+        "aansprakelijken": {
+            "$ref": "#/definitions/aansprakelijken"
+        },
+        "publiekrechtelijkeFunctionarissen": {
+            "$ref": "#/definitions/publiekrechtelijkeFunctionarissen"
+        },
+        "overigeFunctionarissen": {
+            "$ref": "#/definitions/overigeFunctionarissen"
         }
     }
 }

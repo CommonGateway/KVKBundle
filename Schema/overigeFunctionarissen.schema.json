@@ -1,6 +1,6 @@
 {
-    "title": "gemachtigde",
-    "$id": "https://opencatalogi.nl/gemachtigde.schema.json",
+    "title": "overigeFunctionarissen",
+    "$id": "https://opencatalogi.nl/overigeFunctionarissen.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "version": "0.1.0",
     "type": "object",
@@ -14,9 +14,11 @@
         "volledigeNaam": {
             "type": "string"
         },
-        "type": {},
+        "type": {
+            "type": "string"
+        },
         "bezoekadres": {
-            "$ref": "#/definitions/bezoekadres"
+            "$ref": "#definitions/bezoekadres"
         },
         "postadres": {
             "$ref": "#/definitions/postadres"
@@ -36,8 +38,20 @@
         "functie": {
             "type": "string"
         },
-        "volmacht": {
-            "$ref": "#/definitions/volmacht"
+        "bevoegdheidFunctionaaris": {
+            "type": "string"
+        },
+        "bevoegdheidVereffenaar": {
+            "type": "string"
+        },
+        "geplaatstKapitaal": {
+            "$ref": "#/definitions/geplaatstKapitaal"
+        },
+        "gestortKapitaal": {
+            "$ref": "#/definitions/gestortKapitaal"
+        },
+        "indicatieAfwijkendAansprakelijkheidsbeding": {
+            "type": "boolean"
         }
     }
 }

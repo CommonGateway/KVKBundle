@@ -1,6 +1,6 @@
 {
-    "title": "gemachtigde",
-    "$id": "https://opencatalogi.nl/gemachtigde.schema.json",
+    "title": "aansprakelijken",
+    "$id": "https://opencatalogi.nl/aansprakelijken.schema.json",
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "version": "0.1.0",
     "type": "object",
@@ -14,7 +14,9 @@
         "volledigeNaam": {
             "type": "string"
         },
-        "type": {},
+        "type": {
+            "type": "string"
+        },
         "bezoekadres": {
             "$ref": "#/definitions/bezoekadres"
         },
@@ -36,8 +38,17 @@
         "functie": {
             "type": "string"
         },
-        "volmacht": {
-            "$ref": "#/definitions/volmacht"
+        "bevoegdheid": {
+            "type": "string"
+        },
+        "beperkingInEuros": {
+            "$ref": "#/definitions/beperkingInEuros"
+        },
+        "indicatieOverigeBeperking": {
+            "type": "boolean"
+        },
+        "indicatieHandlichtingVerleend": {
+            "type": "boolean"
         }
     }
 }

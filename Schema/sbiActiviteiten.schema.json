@@ -8,6 +8,8 @@
         "sbiCode": {
             "type": "string"
         },
-        "indicatieHoofdactiviteit": {}
+        "indicatieHoofdactiviteit": {
+            "type": "boolean"
+        }
     }
 }

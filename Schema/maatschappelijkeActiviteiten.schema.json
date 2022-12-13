@@ -20,10 +20,18 @@
         "eigenaar": {
             "$ref": "#/definitions/eigenaar"
         },
-        "bezoekadres": {},
-        "datumAanvang": {},
-        "datumEinde": {},
-        "postadres": {},
+        "bezoekadres": {
+            "$ref": "#/definitions/bezoekadres"
+        },
+        "datumAanvang": {
+            "$ref": "#/definitions/datumAanvang"
+        },
+        "datumEinde": {
+            "$ref": "#/definitions/datuminde"
+        },
+        "postadres": {
+            "$ref": "#definitions/postadres"
+        },
         "domein": {
             "type": "string"
         },
