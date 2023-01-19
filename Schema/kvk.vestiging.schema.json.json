@@ -1,0 +1,59 @@
+{
+  "$id": "https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "0.1",
+  "title": "Vestiging",
+  "type": "object",
+  "properties": {
+    "kvkNummer": {
+      "type": "string",
+      "required": "true"
+    },
+    "vestigingsnummer": {
+      "type": "string"
+    },
+    "eersteHandelsnaam": {
+      "type": "string"
+    },
+    "bezoekadres": {
+      "type": "string",
+      "$ref": "https://opencatalogi.nl/kvk.adres.schema.json"
+    },
+    "postadres": {
+      "type": "string",
+      "$ref": "https://opencatalogi.nl/kvk.postAdres.schema.json"
+    },
+    "bezoekadres": {
+      "type": "string",
+      "$ref": "https://opencatalogi.nl/kvk.adres.schema.json"
+    },
+    "emailAdres": {
+      "type": "string",
+      "format": "email"
+    },
+    "domein": {
+      "type": "string",
+      "format": "url"
+    },
+    "telefoonnummer": {
+      "type": "string",
+      "format": "phone"
+    },
+    "faxnummer": {
+      "type": "string",
+      "format": "phone"
+    },
+    "handelsnaam": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "huisnummer": {
+      "type": "string"
+    },
+    "huisnummerToevoeging": {
+      "type": "string"
+    }
+  }
+}
