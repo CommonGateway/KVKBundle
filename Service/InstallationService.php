@@ -5,14 +5,21 @@ namespace CommonGateway\KVKBundle\Service;
 
 use App\Entity\DashboardCard;
 use App\Entity\Endpoint;
+use App\Entity\Entity;
 use CommonGateway\CoreBundle\Installer\InstallerInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class InstallationService implements InstallerInterface
 {
     private EntityManagerInterface $entityManager;
+    private ContainerInterface $container;
     private SymfonyStyle $io;
+
+    public const SCHEMAS_THAT_SHOULD_HAVE_ENDPOINTS = [
+        ['reference' => 'https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json', 'path' => '/vestigingen','methods' => []],
+    ];
 
     public function __construct(EntityManagerInterface $entityManager)
     {
@@ -49,53 +56,40 @@ class InstallationService implements InstallerInterface
 
     public function checkDataConsistency()
     {
-
-        // Lets create some genneric dashboard cards
-        $objectsThatShouldHaveCards = ['https://opencatalogi.nl/example.schema.json'];
-
-        foreach ($objectsThatShouldHaveCards as $object) {
-            (isset($this->io) ? $this->io->writeln('Looking for a dashboard card for: ' . $object) : '');
-            $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => $object]);
-            if (
-                !$dashboardCard = $this->entityManager->getRepository('App:DashboardCard')->findOneBy(['entityId' => $entity->getId()])
-            ) {
-                $dashboardCard = new DashboardCard();
-                $dashboardCard->setType('schema');
-                $dashboardCard->setEntity('App:Entity');
-                $dashboardCard->setObject('App:Entity');
-                $dashboardCard->setName($entity->getName());
-                $dashboardCard->setDescription($entity->getDescription());
-                $dashboardCard->setEntityId($entity->getId());
-                $dashboardCard->setOrdering(1);
-                $this->entityManager->persist($dashboardCard);
-                (isset($this->io) ? $this->io->writeln('Dashboard card created') : '');
-                continue;
-            }
-            (isset($this->io) ? $this->io->writeln('Dashboard card found') : '');
-        }
-
         // Let create some endpoints
-        $objectsThatShouldHaveEndpoints = ['https://opencatalogi.nl/example.schema.json'];
+        $this->createEndpoints($this::SCHEMAS_THAT_SHOULD_HAVE_ENDPOINTS);
 
-        foreach ($objectsThatShouldHaveEndpoints as $object) {
-            (isset($this->io) ? $this->io->writeln('Looking for a endpoint for: ' . $object) : '');
-            $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => $object]);
+        // Lets create the KVK zoeken endpoint
+        $endpointRepository = $this->entityManager->getRepository('App:Endpoint');
+        $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => 'https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json']);
+        if ($entity instanceof Entity && !$endpointRepository->findOneBy(['name' => 'kvk zoeken'])) {
+            $endpoint = new Endpoint($entity, '/kvk/zoeken', ['GET']);
 
-            if (
-                count($entity->getEndpoints()) == 0
-            ) {
-                $endpoint = new Endpoint($entity);
-                $this->entityManager->persist($endpoint);
-                (isset($this->io) ? $this->io->writeln('Endpoint created') : '');
-                continue;
-            }
-            (isset($this->io) ? $this->io->writeln('Endpoint found') : '');
+            $this->entityManager->persist($endpoint);
+            $this->entityManager->flush();
         }
 
-        $this->entityManager->flush();
-
-        // Lets see if there is a generic search endpoint
 
 
+
+    }
+
+    private function createEndpoints($objectsThatShouldHaveEndpoints): array
+    {
+        $endpointRepository = $this->entityManager->getRepository('App:Endpoint');
+        $endpoints = [];
+        foreach($objectsThatShouldHaveEndpoints as $objectThatShouldHaveEndpoint) {
+            $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => $objectThatShouldHaveEndpoint['reference']]);
+            if ($entity instanceof Entity && !$endpointRepository->findOneBy(['name' => $entity->getName()])) {
+                $endpoint = new Endpoint($entity, $objectThatShouldHaveEndpoint['path'], $objectThatShouldHaveEndpoint['methods']);
+
+                $this->entityManager->persist($endpoint);
+                $this->entityManager->flush();
+                $endpoints[] = $endpoint;
+            }
+        }
+        (isset($this->io) ? $this->io->writeln(count($endpoints).' Endpoints Created'): '');
+
+        return $endpoints;
     }
 }

@@ -1,0 +1,45 @@
+{
+  "$id": "https://opencatalogi.nl/kvk.postAdres.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "0.1",
+  "title": "Post Adres",
+  "type": "object",
+  "properties": {
+    "postbusnummer": {
+      "type": "string"
+    },
+    "nummeraanduidingidentificatie": {
+      "type": "string"
+    },
+    "adresseerbaarobjectidentificatie": {
+      "type": "string"
+    },
+    "straatnaam": {
+      "type": "string"
+    },
+    "huisnummer": {
+      "type": "string"
+    },
+    "huisnummertoevoeging": {
+      "type": "string"
+    },
+    "huisletter": {
+      "type": "string"
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "woonplaats": {
+      "type": "string"
+    },
+    "straatHuisnummer": {
+      "type": "string"
+    },
+    "postcodeWoonplaats": {
+      "type": "string"
+    },
+    "regio": {
+      "type": "string"
+    }
+  }
+}

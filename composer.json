@@ -1,6 +1,6 @@
 {
     "name": "common-gateway/kvk-bundle",
-    "description": "An example package for creating symfony flex bundles as plugins",
+    "description": "An example mock for the KVK api",
     "type": "symfony-bundle",
     "keywords": [
         "commongateway",
@@ -9,14 +9,15 @@
         "conduction",
         "symfony",
         "common-gateway-plugin",
-        "pet store"
+        "kvk",
+        "Kamer van Koophandel"
     ],
     "homepage": "https://commongateway.nl",
     "license": "EUPL-1.2",
     "minimum-stability": "dev",
     "require": {
         "php": ">=7.4",
-        "commongateway/corebundle": "dev-master"
+        "commongateway/corebundle": ">=0.0.1 || dev-version-kiss"
     },
     "require-dev": {
         "symfony/dependency-injection": "~3.4|~4.1|~5.0"
@@ -25,10 +26,5 @@
         "psr-4": {
             "CommonGateway\\KVKBundle\\": ""
         }
-    },
-    "scripts": {
-        "post-package-install": "bin/console common-gateway/kvk-bundle",
-        "post-package-update": "bin/console common-gateway/kvk-bundle",
-        "post-package-uninstall": "bin/console common-gateway/kvk-bundle"
     }
 }
