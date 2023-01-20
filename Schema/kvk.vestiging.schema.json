@@ -15,18 +15,6 @@
     "eersteHandelsnaam": {
       "type": "string"
     },
-    "bezoekadres": {
-      "type": "string",
-      "$ref": "https://opencatalogi.nl/kvk.adres.schema.json"
-    },
-    "postadres": {
-      "type": "string",
-      "$ref": "https://opencatalogi.nl/kvk.postAdres.schema.json"
-    },
-    "bezoekadres": {
-      "type": "string",
-      "$ref": "https://opencatalogi.nl/kvk.adres.schema.json"
-    },
     "emailAdres": {
       "type": "string",
       "format": "email"
@@ -54,6 +42,14 @@
     },
     "huisnummerToevoeging": {
       "type": "string"
+    },
+    "bezoekadres": {
+      "type": "object",
+      "$ref": "https://opencatalogi.nl/kvk.adres.schema.json"
+    },
+    "postadres": {
+      "type": "object",
+      "$ref": "https://opencatalogi.nl/kvk.postAdres.schema.json"
     }
   }
 }
