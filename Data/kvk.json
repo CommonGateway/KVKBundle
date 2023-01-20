@@ -6,7 +6,7 @@
       "eersteHandelsnaam": "Slagerij het olijke varken",
       "emailAdres":  "slager@test.nl",
       "telefoonnummer":   "0570-123456",
-      "adres": {
+      "bezoekadres": {
         "straatnaam": "Dorpsstraat",
         "huisnummer": "24",
         "postcode": "7431 CL",
@@ -23,7 +23,7 @@
       "eersteHandelsnaam": "Bakkerij  het gulden broodje",
       "emailAdres":  "bakkerij@test.nl",
       "telefoonnummer":  "0570-123457",
-      "adres": {
+      "bezoekadres": {
         "straatnaam": "Dorpsstraat",
         "huisnummer": "26",
         "postcode": "7431 CL",
@@ -40,7 +40,7 @@
       "eersteHandelsnaam": "Opticien van den Bril",
       "emailAdres":  "bril@test.nl",
       "telefoonnummer":  "0570-123458",
-      "adres": {
+      "bezoekadres": {
         "straatnaam": "Dorpsstraat",
         "huisnummer": "28",
         "postcode": "7431 CL",
@@ -57,7 +57,7 @@
       "eersteHandelsnaam":  "Boekenwinkel leesplezier",
       "emailAdres":  "boeken@test.nl",
       "telefoonnummer":  "0570-123459",
-      "adres": {
+      "bezoekadres": {
         "straatnaam": "Dorpsstraat",
         "huisnummer": "30",
         "postcode": "7431 CL",
