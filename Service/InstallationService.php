@@ -18,7 +18,7 @@ class InstallationService implements InstallerInterface
     private SymfonyStyle $io;
 
     public const SCHEMAS_THAT_SHOULD_HAVE_ENDPOINTS = [
-        ['reference' => 'https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json', 'path' => '/vestigingen','methods' => []],
+        ['reference' => 'https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json', 'path' => 'vestigingen','methods' => []],
     ];
 
     public function __construct(EntityManagerInterface $entityManager)
@@ -63,7 +63,8 @@ class InstallationService implements InstallerInterface
         $endpointRepository = $this->entityManager->getRepository('App:Endpoint');
         $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => 'https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json']);
         if ($entity instanceof Entity && !$endpointRepository->findOneBy(['name' => 'kvk zoeken'])) {
-            $endpoint = new Endpoint($entity, '/kvk/zoeken', ['GET']);
+            // todo: add a const for this just like all the other endpoints!
+            $endpoint = new Endpoint($entity, null, ['path' => '/kvk/zoeken', 'methods' => ['GET']]);
 
             $this->entityManager->persist($endpoint);
             $this->entityManager->flush();
@@ -81,7 +82,7 @@ class InstallationService implements InstallerInterface
         foreach($objectsThatShouldHaveEndpoints as $objectThatShouldHaveEndpoint) {
             $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => $objectThatShouldHaveEndpoint['reference']]);
             if ($entity instanceof Entity && !$endpointRepository->findOneBy(['name' => $entity->getName()])) {
-                $endpoint = new Endpoint($entity, $objectThatShouldHaveEndpoint['path'], $objectThatShouldHaveEndpoint['methods']);
+                $endpoint = new Endpoint($entity, null, $objectThatShouldHaveEndpoint);
 
                 $this->entityManager->persist($endpoint);
                 $this->entityManager->flush();
