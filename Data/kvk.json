@@ -1,7 +1,7 @@
 {
   "https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json": [
     {
-      "kvknummer": "12345678",
+      "kvkNummer": "12345678",
       "vestigingsnummer": "321654871234",
       "eersteHandelsnaam": "Slagerij het olijke varken",
       "emailAdres":  "slager@test.nl",
@@ -18,7 +18,7 @@
       "huisnummerToevoeging":""
     },
     {
-      "kvknummer": "12345679",
+      "kvkNummer": "12345679",
       "vestigingsnummer": "321654871235",
       "eersteHandelsnaam": "Bakkerij  het gulden broodje",
       "emailAdres":  "bakkerij@test.nl",
@@ -35,7 +35,7 @@
       "huisnummerToevoeging":""
     },
     {
-      "kvknummer": "12345680",
+      "kvkNummer": "12345680",
       "vestigingsnummer": "321654871236",
       "eersteHandelsnaam": "Opticien van den Bril",
       "emailAdres":  "bril@test.nl",
@@ -52,7 +52,7 @@
       "huisnummerToevoeging":""
     },
     {
-      "kvknummer": "12345681",
+      "kvkNummer": "12345681",
       "vestigingsnummer": "321654871237",
       "eersteHandelsnaam":  "Boekenwinkel leesplezier",
       "emailAdres":  "boeken@test.nl",
