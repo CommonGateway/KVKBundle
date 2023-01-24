@@ -1,0 +1,51 @@
+{
+    "title": "MaatschappelijkeActiviteiten",
+    "$id": "https://opencatalogi.nl/maatschappelijkeActiviteiten.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "activiteiten": {
+            "$ref": "#/definitions/activiteiten"
+        },
+        "kvknummer": {
+            "type": "string"
+        },
+        "eersteHandelsnaam": {
+            "type": "string"
+        },
+        "handelsnamen": {
+            "type": "string"
+        },
+        "eigenaar": {
+            "$ref": "#/definitions/eigenaar"
+        },
+        "bezoekadres": {
+            "$ref": "#/definitions/bezoekadres"
+        },
+        "datumAanvang": {
+            "$ref": "#/definitions/datumAanvang"
+        },
+        "datumEinde": {
+            "$ref": "#/definitions/datuminde"
+        },
+        "postadres": {
+            "$ref": "#definitions/postadres"
+        },
+        "domein": {
+            "type": "string"
+        },
+        "telefoonnummer": {
+            "type": "string"
+        },
+        "faxnummer": {
+            "type": "string"
+        },
+        "hoofdvestigingnummer": {
+            "type": "string"
+        },
+        "vestigingNummers": {
+            "type": "string"
+        }
+    }
+}

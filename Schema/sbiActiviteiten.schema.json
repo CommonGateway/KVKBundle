@@ -1,0 +1,15 @@
+{
+    "title": "sbiActiviteiten",
+    "$id": "https://opencatalogi.nl/sbiActiviteiten.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "sbiCode": {
+            "type": "string"
+        },
+        "indicatieHoofdactiviteit": {
+            "type": "boolean"
+        }
+    }
+}

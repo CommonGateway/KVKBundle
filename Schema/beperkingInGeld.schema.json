@@ -1,0 +1,15 @@
+{
+    "title": "beperkingInGeld",
+    "$id": "https://opencatalogi.nl/beperkingInGeld.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "som": {
+            "type": "integer"
+        },
+        "valuta": {
+            "type": "string"
+        }
+    }
+}

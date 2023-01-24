@@ -1,0 +1,45 @@
+{
+    "title": "bezoekadres",
+    "$id": "https://opencatalogi.nl/bezoekadres.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "version": "0.1.0",
+    "type": "object",
+    "properties": {
+        "nummeraanduidingidentificatie": {
+            "type": "string"
+        },
+        "adresseerbaarobjectidentificatie": {
+            "type": "string"
+        },
+        "straatnaam": {
+            "type": "string"
+        },
+        "huisnummer": {
+            "type": "integer"
+        },
+        "huisletter": {
+            "type": "string"
+        },
+        "huisnummertoevoeging": {
+            "type": "string"
+        },
+        "postcode": {
+            "type": "string"
+        },
+        "woonplaats": {
+            "type": "string"
+        },
+        "straatHuisnummer": {
+            "type": "string"
+        },
+        "postcodeWoonplaats": {
+            "type": "string"
+        },
+        "regio": {
+            "type": "string"
+        },
+        "land": {
+            "type": "string"
+        }
+    }
+}
