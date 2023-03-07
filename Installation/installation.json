@@ -1,3 +1,12 @@
 {
-    "installationService": "CommonGateway\\KVKBundle\\Service\\InstallationService"
+    "installationService": "CommonGateway\\KVKBundle\\Service\\InstallationService",
+    "endpoints": {
+        "schemas": [
+            {
+                "reference": "https://opencatalogi.nl/kvk.vestigings.schema.json",
+                "path": "vestigingen",
+                "methods": []
+            }
+        ]
+    }
 }
