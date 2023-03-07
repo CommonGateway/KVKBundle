@@ -3,7 +3,7 @@
     "endpoints": {
         "schemas": [
             {
-                "reference": "https://opencatalogi.nl/kvk.vestigings.schema.json",
+                "reference": "https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json",
                 "path": "vestigingen",
                 "methods": []
             }
