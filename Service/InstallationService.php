@@ -43,7 +43,7 @@ class InstallationService implements InstallerInterface
         $entity = $this->entityManager->getRepository('App:Entity')->findOneBy(['reference' => 'https://opencatalogi.nl/kvk.vestigings.schema.json.schema.json']);
         if ($entity instanceof Entity && !$endpointRepository->findOneBy(['name' => 'kvk zoeken'])) {
             // todo: add a const for this just like all the other endpoints!
-            $endpoint = new Endpoint($entity, null, ['path' => '/kvk/zoeken', 'methods' => ['GET']]);
+            $endpoint = new Endpoint($entity, null, ['name' => 'kvk zoeken', 'path' => '/kvk/zoeken', 'methods' => ['GET']]);
 
             $this->entityManager->persist($endpoint);
             $this->entityManager->flush();
