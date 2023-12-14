@@ -18,9 +18,9 @@ softwareType: softwareAddon
 description:
   en:
     localisedName: null
-    genericName: Symfony bundle for KVK functionality
+    genericName: Symfony bundle for KVK functionality.
     shortDescription: KVKBundle
-    longDescription: null
+    longDescription: Symfony bundle for KVK functionality.
     documentation: null
     apiDocumentation: null
     features: []
@@ -29,9 +29,9 @@ description:
     awards: []
   nl:
     localisedName: null
-    genericName: Symfony bundle voor KVK functionaliteit
+    genericName: Symfony bundle voor KVK functionaliteit.
     shortDescription: KVKBundle
-    longDescription: null
+    longDescription: Symfony bundle voor KVK functionaliteit.
     documentation: null
     apiDocumentation: null
     features: []
