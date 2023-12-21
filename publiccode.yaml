@@ -18,23 +18,25 @@ softwareType: softwareAddon
 description:
   en:
     localisedName: null
-    genericName: Symfony bundle for KVK functionality.
-    shortDescription: KVKBundle
-    longDescription: Symfony bundle for KVK functionality.
+    genericName: null
+    shortDescription: "Symfony bundle for KVK functionality."
+    longDescription: "Symfony bundle for KVK functionality."
     documentation: null
     apiDocumentation: null
-    features: []
+    features:
+      - Common Ground Gateway Plugin
     screenshots: []
     videos: []
     awards: []
   nl:
     localisedName: null
-    genericName: Symfony bundle voor KVK functionaliteit.
-    shortDescription: KVKBundle
-    longDescription: Symfony bundle voor KVK functionaliteit.
+    genericName: null
+    shortDescription: "Symfony bundle voor KVK functionaliteit."
+    longDescription: "Symfony bundle voor KVK functionaliteit."
     documentation: null
     apiDocumentation: null
-    features: []
+    features:
+      - Common Ground Gateway Plugin
     screenshots: []
     videos: []
     awards: []
